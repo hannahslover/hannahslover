@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  background: #ffe6f2;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin-top: 400px;
+  background-image: url("background.jpg");
+}
+
+h1 {
+  font-family: "Dancing Script", cursive;
+  font-weight: 600;
+  font-size: 50px;
+  color: #cc0052;
+}
+
+h2 {
+  font-family: "Dancing Script", cursive;
+  font-weight: 600;
+  font-size: 30px;
+  color: #cc0052;
+}
+#surpriseBtn {
+  margin-top: 20px;
+  padding: 15px 30px;
+  background: #ff4da6;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+#surpriseBtn:hover {
+  background: #ff1a8c;
+}
+
+/* IMAGE HEART */
+.heart-img {
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 200px;
+  transform: translateX(-50%) scale(0);
+  animation: pop 1s forwards;
+  cursor: pointer;
+}
+
+@keyframes pop {
+  to {
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.close {
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+}
